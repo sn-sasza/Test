@@ -34,7 +34,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-vT-ZeX">
                                 <rect key="frame" x="20" y="272" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ4-F5-HCx">
                                 <rect key="frame" x="107" y="336" width="200" height="50"/>
@@ -55,6 +55,17 @@
                                 <rect key="frame" x="283" y="448" width="51" height="31"/>
                                 <color key="onTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat2" translatesAutoresizingMaskIntoConstraints="NO" id="CNT-mH-BiH">
+                                <rect key="frame" x="266" y="509" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Be3-dU-bMC"/>
+                                    <constraint firstAttribute="height" constant="128" id="OiY-XX-8Pi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-XK-gzm">
+                                <rect key="frame" x="20" y="509" width="128" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -71,12 +82,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YF1-vR-BIB" secondAttribute="trailing" constant="20" id="VUf-oq-b1O"/>
                             <constraint firstItem="beg-pD-Lry" firstAttribute="top" secondItem="rWf-Jd-W73" secondAttribute="bottom" constant="30" id="YZB-tf-eA8"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZfM-Jf-edt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CNT-mH-BiH" secondAttribute="trailing" constant="20" id="ctk-wq-Nnx"/>
                             <constraint firstItem="YF1-vR-BIB" firstAttribute="top" secondItem="hub-st-aMb" secondAttribute="bottom" constant="30" id="iUH-Un-GEH"/>
                             <constraint firstItem="jJ4-F5-HCx" firstAttribute="centerX" secondItem="Coh-vT-ZeX" secondAttribute="centerX" id="kU5-z0-d1d"/>
                             <constraint firstItem="xgM-dx-ffU" firstAttribute="top" secondItem="YF1-vR-BIB" secondAttribute="bottom" constant="30" id="mSs-2Q-sIw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Coh-vT-ZeX" secondAttribute="trailing" constant="20" id="riZ-Ku-7jA"/>
                             <constraint firstItem="rWf-Jd-W73" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="uuz-Dj-SGT"/>
                             <constraint firstItem="xgM-dx-ffU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xIR-pw-y2G"/>
+                            <constraint firstItem="CNT-mH-BiH" firstAttribute="top" secondItem="beg-pD-Lry" secondAttribute="bottom" constant="30" id="xj7-Ih-BB0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -86,4 +99,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat1" width="333.33334350585938" height="257.66665649414062"/>
+        <image name="cat2" width="240" height="240"/>
+    </resources>
 </document>
