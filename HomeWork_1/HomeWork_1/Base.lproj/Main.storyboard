@@ -22,12 +22,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="YF1-vR-BIB">
+                                <rect key="frame" x="20" y="155" width="374" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="YF1-vR-BIB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5nw-85-bAr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hub-st-aMb" secondAttribute="trailing" constant="20" id="HS0-VA-gAi"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PpI-eS-Q3x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YF1-vR-BIB" secondAttribute="trailing" constant="20" id="VUf-oq-b1O"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZfM-Jf-edt"/>
+                            <constraint firstItem="YF1-vR-BIB" firstAttribute="top" secondItem="hub-st-aMb" secondAttribute="bottom" constant="30" id="iUH-Un-GEH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
