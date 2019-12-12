@@ -46,22 +46,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rWf-Jd-W73">
+                                <rect key="frame" x="82" y="416" width="250" height="2"/>
+                                <color key="progressTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beg-pD-Lry">
+                                <rect key="frame" x="283" y="448" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Coh-vT-ZeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Sj-gu-gA9"/>
                             <constraint firstItem="YF1-vR-BIB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5nw-85-bAr"/>
+                            <constraint firstItem="rWf-Jd-W73" firstAttribute="trailing" secondItem="beg-pD-Lry" secondAttribute="trailing" id="9Ke-Tl-ME3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hub-st-aMb" secondAttribute="trailing" constant="20" id="HS0-VA-gAi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xgM-dx-ffU" secondAttribute="trailing" constant="20" id="IAn-Mc-AQb"/>
                             <constraint firstItem="jJ4-F5-HCx" firstAttribute="top" secondItem="Coh-vT-ZeX" secondAttribute="bottom" constant="30" id="JDD-o2-Y8h"/>
                             <constraint firstItem="Coh-vT-ZeX" firstAttribute="top" secondItem="xgM-dx-ffU" secondAttribute="bottom" constant="16" id="L4j-pv-obU"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PpI-eS-Q3x"/>
+                            <constraint firstItem="rWf-Jd-W73" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QFf-V8-GlQ"/>
+                            <constraint firstItem="rWf-Jd-W73" firstAttribute="top" secondItem="jJ4-F5-HCx" secondAttribute="bottom" constant="30" id="UtG-SR-DL8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YF1-vR-BIB" secondAttribute="trailing" constant="20" id="VUf-oq-b1O"/>
+                            <constraint firstItem="beg-pD-Lry" firstAttribute="top" secondItem="rWf-Jd-W73" secondAttribute="bottom" constant="30" id="YZB-tf-eA8"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZfM-Jf-edt"/>
                             <constraint firstItem="YF1-vR-BIB" firstAttribute="top" secondItem="hub-st-aMb" secondAttribute="bottom" constant="30" id="iUH-Un-GEH"/>
                             <constraint firstItem="jJ4-F5-HCx" firstAttribute="centerX" secondItem="Coh-vT-ZeX" secondAttribute="centerX" id="kU5-z0-d1d"/>
                             <constraint firstItem="xgM-dx-ffU" firstAttribute="top" secondItem="YF1-vR-BIB" secondAttribute="bottom" constant="30" id="mSs-2Q-sIw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Coh-vT-ZeX" secondAttribute="trailing" constant="20" id="riZ-Ku-7jA"/>
+                            <constraint firstItem="rWf-Jd-W73" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="uuz-Dj-SGT"/>
                             <constraint firstItem="xgM-dx-ffU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xIR-pw-y2G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
