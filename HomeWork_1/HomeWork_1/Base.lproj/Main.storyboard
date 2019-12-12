@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-vT-ZeX">
-                                <rect key="frame" x="20" y="259" width="374" height="34"/>
+                                <rect key="frame" x="20" y="255" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -42,6 +42,7 @@
                             <constraint firstItem="YF1-vR-BIB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5nw-85-bAr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hub-st-aMb" secondAttribute="trailing" constant="20" id="HS0-VA-gAi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xgM-dx-ffU" secondAttribute="trailing" constant="20" id="IAn-Mc-AQb"/>
+                            <constraint firstItem="Coh-vT-ZeX" firstAttribute="top" secondItem="xgM-dx-ffU" secondAttribute="bottom" constant="16" id="L4j-pv-obU"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PpI-eS-Q3x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YF1-vR-BIB" secondAttribute="trailing" constant="20" id="VUf-oq-b1O"/>
                             <constraint firstItem="hub-st-aMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZfM-Jf-edt"/>
@@ -49,7 +50,6 @@
                             <constraint firstItem="xgM-dx-ffU" firstAttribute="top" secondItem="YF1-vR-BIB" secondAttribute="bottom" constant="30" id="mSs-2Q-sIw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Coh-vT-ZeX" secondAttribute="trailing" constant="20" id="riZ-Ku-7jA"/>
                             <constraint firstItem="xgM-dx-ffU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xIR-pw-y2G"/>
-                            <constraint firstItem="Coh-vT-ZeX" firstAttribute="top" secondItem="xgM-dx-ffU" secondAttribute="bottom" constant="20" id="xwg-DJ-OZT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
