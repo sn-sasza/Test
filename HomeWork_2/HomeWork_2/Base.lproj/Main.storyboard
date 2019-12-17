@@ -30,6 +30,9 @@
                                     <segment title="Login"/>
                                     <segment title="Sign Up"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="H4R-cF-jqX"/>
+                                </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-Yu-nrY" userLabel="LoginContainerView">
                                 <rect key="frame" x="0.0" y="111" width="414" height="785"/>
@@ -60,6 +63,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginView" destination="tLP-Yu-nrY" id="j9Y-1b-7xA"/>
+                        <outlet property="segmentedSwitch" destination="w4N-Dd-7X5" id="rAZ-Mb-s1j"/>
+                        <outlet property="signUpView" destination="lcm-Ts-yfm" id="cRT-gK-jlG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

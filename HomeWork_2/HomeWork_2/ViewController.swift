@@ -8,13 +8,34 @@
 
 import UIKit
 
+//MARK: - ViewController
 class ViewController: UIViewController {
-
+    
+    //MARK: - outlets
+    @IBOutlet weak var segmentedSwitch: UISegmentedControl!
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var signUpView: UIView!
+    
+    //MARK: - enums
+    enum Auth: Int {
+        case login
+        case signIn
+    }
+    
+    //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    //MARK: - actions
+    @IBAction func switchSelected(_ sender: Any) {
+        
+        guard let option = Auth(rawValue: segmentedSwitch.selectedSegmentIndex) else { return }
+        
+        switch option {
+        case .login: print("Hello from Login")
+        case .signIn: print("Hello from Sign Up")
+        }
+    }
+    
 }
-
