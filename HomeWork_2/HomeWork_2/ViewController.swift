@@ -25,17 +25,27 @@ class ViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        signUpView.isHidden = true
     }
     
     //MARK: - actions
     @IBAction func switchSelected(_ sender: Any) {
-        
+        selectPresentableView()
+    }
+    
+    //MARK: - methods
+    func selectPresentableView() {
         guard let option = Auth(rawValue: segmentedSwitch.selectedSegmentIndex) else { return }
         
         switch option {
-        case .login: print("Hello from Login")
-        case .signIn: print("Hello from Sign Up")
+        case .login:
+            loginView.isHidden = false
+            signUpView.isHidden = true
+            print("Hello from Login")
+        case .signIn:
+            loginView.isHidden = true
+            signUpView.isHidden = false
+            print("Hello from Sign Up")
         }
     }
-    
 }
