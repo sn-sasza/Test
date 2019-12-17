@@ -96,7 +96,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -122,7 +122,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -138,6 +138,9 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgetPasswordButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="yFf-cl-lpc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyD-qd-2f5">
                                 <rect key="frame" x="20" y="372.5" width="374" height="40"/>
@@ -149,6 +152,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="GzW-Eh-opu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4H-1q-Wwg">
                                 <rect key="frame" x="20" y="725" width="374" height="30"/>
@@ -156,6 +162,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="helpButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="TE4-oh-lWR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -178,15 +187,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zzk-Hd-s0E"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="NqQ-ov-81d" id="QcW-5B-tXz"/>
+                        <outlet property="forgotPasswordButton" destination="Npf-qI-tcc" id="IS6-cK-6j1"/>
+                        <outlet property="helpButton" destination="x4H-1q-Wwg" id="7uO-kD-MZ9"/>
+                        <outlet property="loginButton" destination="qyD-qd-2f5" id="Rr7-rF-2sE"/>
+                        <outlet property="passwordTextField" destination="ns5-j4-WQP" id="6in-7K-6sQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyv-Q9-YbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-513.04347826086962" y="874.88839285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="9K0-vh-6Cl">
             <objects>
-                <viewController id="rA2-mX-xb9" sceneMemberID="viewController">
+                <viewController id="rA2-mX-xb9" customClass="SignUpViewController" customModule="HomeWork_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J0T-4S-QBf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="785"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,9 +216,12 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTt-eK-tnv">
                                 <rect key="frame" x="182.5" y="144" width="51" height="31"/>
                                 <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="buyerCharacteristicSwitchSelected:" destination="rA2-mX-xb9" eventType="valueChanged" id="2x8-Rx-OGO"/>
+                                </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EP/Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiS-pH-gBR">
-                                <rect key="frame" x="247.5" y="150" width="87.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PE/Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiS-pH-gBR">
+                                <rect key="frame" x="247.5" y="150" width="88" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -222,7 +241,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -248,7 +267,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -268,6 +287,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="R8g-Cr-Kzs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-yh-xaF" userLabel="HelpButton">
                                 <rect key="frame" x="20" y="679" width="374" height="30"/>
@@ -278,6 +300,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="helpButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="kbB-6I-5FF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-41-hLF" userLabel="Agreement">
                                 <rect key="frame" x="20" y="725" width="374" height="30"/>
@@ -288,6 +313,9 @@
                                 <state key="normal" title="User's Agreement">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="userAgreementButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="c7v-VS-hj9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -315,6 +343,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i0T-cc-Ofc"/>
                     </view>
+                    <connections>
+                        <outlet property="buyerCharacteristicSwitch" destination="iTt-eK-tnv" id="Og9-JA-MGO"/>
+                        <outlet property="emailTextField" destination="AaN-om-DH4" id="kRj-3J-tjl"/>
+                        <outlet property="helpButton" destination="QUa-yh-xaF" id="hQk-ha-bcy"/>
+                        <outlet property="passwordTextField" destination="DG1-RY-y7t" id="6gJ-aF-Rc4"/>
+                        <outlet property="signUpButton" destination="Yoa-D8-xDn" id="MRw-cl-KLU"/>
+                        <outlet property="userAgreementButton" destination="HT7-41-hLF" id="ICI-o5-SJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlM-uX-hSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
