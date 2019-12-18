@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     
     //MARK: - enums
     enum Auth: Int {
-        case login
-        case signIn
+        case login = 0
+        case signIn = 1
     }
     
     //MARK: - lifecycle

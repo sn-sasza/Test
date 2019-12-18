@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="forgetPasswordButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="yFf-cl-lpc"/>
+                                    <action selector="forgotPasswordButtonTapped" destination="zZj-sq-gbr" eventType="touchUpInside" id="Gog-BC-t53"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyD-qd-2f5">
@@ -153,7 +153,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="GzW-Eh-opu"/>
+                                    <action selector="authorizationButtonTapped" destination="zZj-sq-gbr" eventType="touchUpInside" id="xgd-sy-8je"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4H-1q-Wwg">
@@ -163,7 +163,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="helpButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="TE4-oh-lWR"/>
+                                    <action selector="helpButtonPressed:" destination="zZj-sq-gbr" eventType="touchUpInside" id="hcX-1I-va4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,11 +188,11 @@
                         <viewLayoutGuide key="safeArea" id="zzk-Hd-s0E"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="NqQ-ov-81d" id="QcW-5B-tXz"/>
-                        <outlet property="forgotPasswordButton" destination="Npf-qI-tcc" id="IS6-cK-6j1"/>
-                        <outlet property="helpButton" destination="x4H-1q-Wwg" id="7uO-kD-MZ9"/>
-                        <outlet property="loginButton" destination="qyD-qd-2f5" id="Rr7-rF-2sE"/>
-                        <outlet property="passwordTextField" destination="ns5-j4-WQP" id="6in-7K-6sQ"/>
+                        <outlet property="authorizationButton" destination="qyD-qd-2f5" id="ZV8-yv-SZx"/>
+                        <outlet property="emailTextField" destination="NqQ-ov-81d" id="C1Y-0p-7uE"/>
+                        <outlet property="forgotPasswordButton" destination="Npf-qI-tcc" id="HYq-B6-rw4"/>
+                        <outlet property="helpButton" destination="x4H-1q-Wwg" id="1XV-3E-M8h"/>
+                        <outlet property="passwordTextField" destination="ns5-j4-WQP" id="yFb-cc-7SI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyv-Q9-YbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -217,7 +217,7 @@
                                 <rect key="frame" x="182.5" y="144" width="51" height="31"/>
                                 <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="buyerCharacteristicSwitchSelected:" destination="rA2-mX-xb9" eventType="valueChanged" id="2x8-Rx-OGO"/>
+                                    <action selector="buyerCharacteristicSwitchSelected:" destination="rA2-mX-xb9" eventType="touchUpInside" id="FRe-8D-JPI"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PE/Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiS-pH-gBR">
@@ -288,7 +288,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="R8g-Cr-Kzs"/>
+                                    <action selector="authorizationButtonTapped" destination="rA2-mX-xb9" eventType="touchUpInside" id="qM0-Ce-dfx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-yh-xaF" userLabel="HelpButton">
@@ -301,7 +301,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="helpButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="kbB-6I-5FF"/>
+                                    <action selector="helpButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="3wD-ZT-1uo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-41-hLF" userLabel="Agreement">
@@ -314,7 +314,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="userAgreementButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="c7v-VS-hj9"/>
+                                    <action selector="userAgreementButtonPressed:" destination="rA2-mX-xb9" eventType="touchUpInside" id="SVi-qq-ZMP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -344,12 +344,12 @@
                         <viewLayoutGuide key="safeArea" id="i0T-cc-Ofc"/>
                     </view>
                     <connections>
-                        <outlet property="buyerCharacteristicSwitch" destination="iTt-eK-tnv" id="Og9-JA-MGO"/>
-                        <outlet property="emailTextField" destination="AaN-om-DH4" id="kRj-3J-tjl"/>
-                        <outlet property="helpButton" destination="QUa-yh-xaF" id="hQk-ha-bcy"/>
-                        <outlet property="passwordTextField" destination="DG1-RY-y7t" id="6gJ-aF-Rc4"/>
-                        <outlet property="signUpButton" destination="Yoa-D8-xDn" id="MRw-cl-KLU"/>
-                        <outlet property="userAgreementButton" destination="HT7-41-hLF" id="ICI-o5-SJ7"/>
+                        <outlet property="authorizationButton" destination="Yoa-D8-xDn" id="pbq-LS-7DA"/>
+                        <outlet property="buyerCharacteristicSwitch" destination="iTt-eK-tnv" id="II3-e2-KHI"/>
+                        <outlet property="emailTextField" destination="AaN-om-DH4" id="XrY-v9-4w6"/>
+                        <outlet property="helpButton" destination="QUa-yh-xaF" id="FEY-6C-V7A"/>
+                        <outlet property="passwordTextField" destination="DG1-RY-y7t" id="fgA-2S-Z8n"/>
+                        <outlet property="userAgreementButton" destination="HT7-41-hLF" id="9Dm-Cx-ZiV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlM-uX-hSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

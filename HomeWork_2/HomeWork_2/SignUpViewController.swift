@@ -9,16 +9,11 @@
 import UIKit
 
 //MARK: - SignUpViewController
-class SignUpViewController: UIViewController, UITextFieldDelegate {
+class SignUpViewController: BaseViewController {
     
     //MARK: - outlets
     @IBOutlet weak var buyerCharacteristicSwitch: UISwitch!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var userAgreementButton: UIButton!
-    
     
     //MARK: - instanceTypes
     enum Buyer: Int {
@@ -29,42 +24,29 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     //MARK: - properies
     var buyer: Buyer!
     
-    //MARK: - lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-    }
-    
     //MARK: - actions
     @IBAction func buyerCharacteristicSwitchSelected(_ sender: Any) {
-        if buyerCharacteristicSwitch.isOn { buyer = .privateEntrepreneurOrCompany }
-        else { buyer = .privatePerson }
-    }
-    
-    @IBAction func signUpButtonPressed(_ sender: Any) {
-        hideKeyboard()
-        // to add implementation
-    }
-    
-    @IBAction func helpButtonPressed(_ sender: Any) {
-        print("helpButtonPressed")
-        // to add implementation
+        if buyerCharacteristicSwitch.isOn {
+            buyer = .privateEntrepreneurOrCompany
+            print("Private Entreneur or Company from Sign Up have selected")
+        } else {
+            buyer = .privatePerson
+            print("Private Person from Sign Up has selected")
+        }
     }
     
     @IBAction func userAgreementButtonPressed(_ sender: Any) {
-        print("userAgreementButtonPressed")
+        print("User Agreement button did tap")
         // to add implementation
     }
     
-    //MARK: - overridedProtocolMetgods
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextField {
-            passwordTextField.becomeFirstResponder()
-        } else if textField == passwordTextField {
-            hideKeyboard()
-        }
-        return true
+    //MARK: - methods
+    override func authorizeUser() {
+        print("Sign Up button from Sign Up pressed")
+        hideKeyboard()
+    }
+    
+    override func askForHelp() {
+        print("Help button from Sign Up did tap")
     }
 }
