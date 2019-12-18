@@ -32,6 +32,8 @@ class SignUpViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     //MARK: - actions

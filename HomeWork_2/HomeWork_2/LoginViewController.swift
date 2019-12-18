@@ -21,6 +21,9 @@ class LoginViewController: UIViewController {
     //MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     //MARK: - actions

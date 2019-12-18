@@ -49,3 +49,12 @@ class ViewController: UIViewController {
         }
     }
 }
+
+//MARK: - UIViewControllerExtension
+extension UIViewController {
+    
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
+}
