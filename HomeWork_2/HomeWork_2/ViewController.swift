@@ -48,6 +48,11 @@ class ViewController: UIViewController {
             print("Hello from Sign Up")
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideKeyboard()
+    }
+    
 }
 
 //MARK: - UIViewControllerExtension
@@ -56,5 +61,4 @@ extension UIViewController {
     func hideKeyboard() {
         view.endEditing(true)
     }
-    
 }

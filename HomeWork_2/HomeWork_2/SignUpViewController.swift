@@ -9,7 +9,7 @@
 import UIKit
 
 //MARK: - SignUpViewController
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - outlets
     @IBOutlet weak var buyerCharacteristicSwitch: UISwitch!
@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -42,17 +43,28 @@ class SignUpViewController: UIViewController {
         else { buyer = .privatePerson }
     }
     
-    
     @IBAction func signUpButtonPressed(_ sender: Any) {
-        print("signUpButtonPressed")
+        hideKeyboard()
+        // to add implementation
     }
     
     @IBAction func helpButtonPressed(_ sender: Any) {
         print("helpButtonPressed")
+        // to add implementation
     }
     
     @IBAction func userAgreementButtonPressed(_ sender: Any) {
         print("userAgreementButtonPressed")
+        // to add implementation
     }
     
+    //MARK: - overridedProtocolMetgods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            hideKeyboard()
+        }
+        return true
+    }
 }

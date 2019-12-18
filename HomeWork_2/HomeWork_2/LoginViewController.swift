@@ -9,7 +9,7 @@
 import UIKit
 
 //MARK: - LoginViewController
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: - outlets
     @IBOutlet weak var emailTextField: UITextField!
@@ -28,15 +28,28 @@ class LoginViewController: UIViewController {
     
     //MARK: - actions
     @IBAction func forgetPasswordButtonPressed(_ sender: Any) {
-        print("forgetPasswordButtonPressed")
+        hideKeyboard()
+        // to add implementation
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        print("loginButtonPressed")
+        hideKeyboard()
+        // to add implementation
     }
     
     
     @IBAction func helpButtonPressed(_ sender: Any) {
         print("helpButtonPressed")
+        // to add implementation
+    }
+    
+    //MARK: - overridedProtocolMetgods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            hideKeyboard()
+        }
+        return true
     }
 }
